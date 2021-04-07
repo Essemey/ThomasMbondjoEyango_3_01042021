@@ -1,3 +1,36 @@
-
+#intro {
+  padding-top: 43px;
+  height: 287px;
+  background-color: #f6f6f6;
+}
+#intro h2 {
+  width: 230px;
+  margin: auto;
+  text-align: center;
+}
+#intro h3 {
+  width: 312px;
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+#intro a {
+  text-decoration: none;
+  margin: auto;
+  margin-bottom: 57px;
+  color: #fff;
+  width: 220px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff79da;
+  background: linear-gradient(168deg, #ff79da 0%, #9356dc 77%);
+  box-shadow: 1px 2px 8px 2px rgba(160, 160, 160, 0.75);
+  border-radius: 100px;
+}
 
 /*# sourceMappingURL=intro.css.map */

@@ -1,0 +1,55 @@
+#explication {
+  height: 440px;
+  padding-top: 52px;
+}
+#explication h3 {
+  font-size: 24px;
+  margin-bottom: 32px;
+  margin-left: 20px;
+}
+#explication #instructions {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+#explication #instructions .instruction {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 323px;
+  height: 75px;
+  background-color: #f6f6f6;
+  box-shadow: 1px 2px 8px 2px rgba(227, 221, 221, 0.75);
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+#explication #instructions .instruction p {
+  font-weight: bold;
+  margin-left: 20px;
+}
+#explication #instructions .instruction i {
+  font-size: 22px;
+  color: #7e7e7e;
+}
+#explication #instructions .instruction .number {
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  right: 12px;
+  height: 24px;
+  width: 24px;
+  margin-right: 22px;
+  background-color: #9356dc;
+  color: white;
+  font-size: 14px;
+}
+#explication #instructions .instruction:nth-child(3) {
+  background-color: #f5edff;
+}
+#explication #instructions .instruction:nth-child(3) i {
+  color: #9356dc;
+}
+
+/*# sourceMappingURL=explication.css.map */
