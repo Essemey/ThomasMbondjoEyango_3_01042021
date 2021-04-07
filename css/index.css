@@ -101,6 +101,82 @@ header h1 img {
   color: #9356dc;
 }
 
+#restaurants {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 58px;
+  padding-bottom: 46px;
+  background-color: #f6f6f6;
+}
+#restaurants h3 {
+  font-size: 24px;
+  margin-bottom: 28px;
+}
+#restaurants .cards {
+  display: flex;
+  flex-direction: column;
+}
+#restaurants .cards .card {
+  height: 251px;
+  border-radius: 20px;
+  box-shadow: 1px 2px 8px 2px rgba(227, 221, 221, 0.75);
+  margin-bottom: 18px;
+}
+#restaurants .cards .card .image {
+  height: 174px;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+#restaurants .cards .card .informations {
+  padding-left: 15px;
+  padding-top: 17px;
+  padding-right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#restaurants .cards .card .informations .text h4 {
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+#restaurants .cards .card .informations i {
+  font-size: 22px;
+}
+#restaurants .cards .card .new {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #008766;
+  border-radius: 3px;
+  width: 80px;
+  background-color: #99e2d0;
+  margin-top: 13px;
+  margin-right: 13px;
+}
+#restaurants .cards #palette .image {
+  background-image: url("../images/palette.jpg");
+  background-position: 50% 100%;
+}
+#restaurants .cards #note .image {
+  background-image: url("../images/note.jpg");
+  background-position: 50% 62%;
+}
+#restaurants .cards #francaise .image {
+  background-image: url("../images/francaise.jpg");
+  background-position: 50% 110%;
+}
+#restaurants .cards #sens .image {
+  background-image: url("../images/sens.jpg");
+  background-position: 50% 100%;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
