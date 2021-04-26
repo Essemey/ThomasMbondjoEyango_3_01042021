@@ -3,6 +3,7 @@ header {
   padding-top: 22px;
   padding-bottom: 12px;
   box-shadow: 0px 0px 6px 3px #cfcfcf;
+  position: relative;
 }
 header h1 {
   width: max-content;
@@ -115,8 +116,13 @@ body {
 
 header {
   display: flex;
+  box-shadow: none;
 }
-header i {
+header a {
+  color: black;
+  text-decoration: none;
+}
+header a i {
   margin-left: 23px;
   font-size: 22px;
   margin-top: 3px;
@@ -129,6 +135,7 @@ main {
 }
 main img {
   height: 258px;
+  object-fit: cover;
   /*position: absolute;*/
 }
 main #menu {
@@ -149,18 +156,20 @@ main #menu_header {
   box-shadow: none;
   align-items: center;
   margin-bottom: 45px;
+  display: flex;
+  justify-content: space-between;
 }
 main #menu_header h1 {
   margin-left: 5px;
   font-family: "Shrikhand";
   font-weight: lighter;
   font-size: 28px;
-  margin-right: 33px;
 }
 main #menu_header i {
   font-size: 24px;
   margin-top: 0px;
   margin-left: 0px;
+  margin-right: 24px;
 }
 main #menu button {
   background: #ff79da;
