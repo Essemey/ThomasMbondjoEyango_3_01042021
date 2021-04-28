@@ -1,0 +1,158 @@
+.loader {
+  background-color: #fcfcfc;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  animation: loader 0.3s ease-in-out 4.4s 1 forwards;
+}
+.loader .both {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loader h1 {
+  font-family: "Shrikhand";
+  opacity: 0;
+  background: #ff79da;
+  background: linear-gradient(168deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 180px;
+  animation: title 2s ease-in-out 2.4s 1 forwards;
+}
+.loader .hamburger {
+  background-color: transparent;
+  height: auto;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loader .hamburger span {
+  height: 25px;
+  margin-bottom: 2px;
+  width: 100%;
+}
+.loader .hamburger .bread {
+  background-color: #f5cb95;
+  height: 25px;
+  width: 100%;
+}
+.loader .hamburger .sesam {
+  width: 15px;
+  height: 4px;
+  background-color: white;
+  border-radius: 100%;
+  position: absolute;
+  margin-top: 10px;
+}
+.loader .hamburger #sesam1 {
+  margin-left: 10px;
+  transform: rotate(340deg);
+}
+.loader .hamburger #sesam6 {
+  margin-left: 30px;
+  transform: rotate(146deg);
+}
+.loader .hamburger #sesam2 {
+  margin-left: 50px;
+  transform: rotate(20deg);
+  margin-top: 6px;
+}
+.loader .hamburger #sesam3 {
+  margin-left: 80px;
+  margin-top: 5px;
+  transform: rotate(350deg);
+}
+.loader .hamburger #sesam4 {
+  margin-left: 100px;
+  transform: rotate(350deg);
+}
+.loader .hamburger #sesam5 {
+  margin-left: 125px;
+  transform: rotate(142deg);
+}
+.loader .hamburger #bread1 {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  animation-name: ingredient;
+  animation-duration: 0.4s;
+  animation-direction: reverse;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.loader .hamburger #bread2 {
+  height: 20px;
+  animation: ingredient 0.4s ease-in-out 2s 1 reverse forwards;
+  opacity: 0;
+}
+.loader .hamburger .content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 2px 2px 0px 2px;
+}
+.loader .hamburger .content .tomatos {
+  display: flex;
+  justify-content: space-between;
+  animation: ingredient 0.4s ease-in-out 0.4s 1 reverse forwards;
+  opacity: 0;
+}
+.loader .hamburger .content .tomatos .tomato {
+  background-color: #e71b1b;
+  width: 49%;
+  height: 15px;
+}
+.loader .hamburger .content .cheddar {
+  background-color: #ff9a16;
+  height: 10px;
+  opacity: 0;
+  animation: ingredient 0.4s ease-in-out 0.8s 1 reverse forwards;
+}
+.loader .hamburger .content .beef {
+  background-color: #6d0101;
+  height: 20px;
+  opacity: 0;
+  animation: ingredient 0.4s ease-in-out 1.2s 1 reverse forwards;
+}
+.loader .hamburger .content .salad {
+  background-color: #1c8f1c;
+  height: 12px;
+  opacity: 0;
+  animation: ingredient 0.4s ease-in-out 1.6s 1 reverse forwards;
+}
+
+@keyframes ingredient {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vh);
+  }
+}
+@keyframes title {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loader {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/*# sourceMappingURL=loader.css.map */

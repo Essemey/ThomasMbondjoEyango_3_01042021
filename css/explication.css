@@ -52,4 +52,10 @@
   color: #9356dc;
 }
 
+@media all and (max-width: 320px) {
+  #explication #instructions .instruction {
+    width: 273px;
+  }
+}
+
 /*# sourceMappingURL=explication.css.map */
