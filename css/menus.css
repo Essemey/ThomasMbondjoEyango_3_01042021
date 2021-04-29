@@ -407,7 +407,7 @@ main #menu_header {
   display: flex;
   justify-content: space-between;
 }
-main #menu_header h1 {
+main #menu_header h2 {
   margin-left: 5px;
   font-family: "Shrikhand";
   font-weight: lighter;
@@ -418,6 +418,27 @@ main #menu_header i {
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 24px;
+  cursor: pointer;
+}
+main #menu_header .heart {
+  z-index: 1;
+}
+main #menu_header .heart:hover .hidden-heart {
+  opacity: 1;
+  transform: scale(1.1);
+}
+main #menu_header .heart .hidden-heart {
+  background: #ff79da;
+  background: linear-gradient(168deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  font-size: 20px;
+  z-index: -1;
+  right: 2px;
+  bottom: 10px;
+  opacity: 0;
+  transition: transform 1s, opacity 1.5s;
 }
 main #menu button {
   background: #ff79da;
@@ -430,6 +451,11 @@ main #menu button {
   font-size: 16px;
   border: none;
   box-shadow: 1px 2px 8px 2px rgba(160, 160, 160, 0.75);
+  transition: box-shadow 0.7s, opacity 0.7s;
+}
+main #menu button:hover {
+  box-shadow: 1px 2px 8px 2px rgba(68, 68, 68, 0.75);
+  opacity: 0.8;
 }
 
 footer {

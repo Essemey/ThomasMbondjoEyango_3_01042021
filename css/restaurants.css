@@ -36,10 +36,14 @@
 #restaurants .cards .card .informations {
   padding-left: 15px;
   padding-top: 17px;
-  padding-right: 25px;
+  padding-right: 5px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+#restaurants .cards .card .informations .text {
+  margin-right: auto;
+  text-decoration: none;
+  color: #000;
 }
 #restaurants .cards .card .informations .text h4 {
   font-size: 18px;
@@ -47,6 +51,26 @@
 }
 #restaurants .cards .card .informations i {
   font-size: 22px;
+}
+#restaurants .cards .card .informations .heart {
+  z-index: 6;
+  cursor: pointer;
+}
+#restaurants .cards .card .informations .heart:hover + .hidden-heart {
+  opacity: 1;
+  transform: scale(1.1);
+}
+#restaurants .cards .card .informations .hidden-heart {
+  background: #ff79da;
+  background: linear-gradient(168deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  font-size: 20px;
+  right: 20px;
+  z-index: 5;
+  opacity: 0;
+  transition: transform 1s, opacity 1.5s;
 }
 #restaurants .cards .card .new {
   height: 30px;
