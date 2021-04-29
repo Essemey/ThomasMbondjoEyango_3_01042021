@@ -1,5 +1,5 @@
 .loader {
-  background-color: #c757ab;
+  background-color: #fcfcfc;
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -7,12 +7,28 @@
   justify-content: center;
   align-items: center;
   z-index: 100;
+  animation: loader 0.3s ease-in-out 4.4s 1 forwards;
+}
+.loader .both {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loader h1 {
+  font-family: "Shrikhand";
+  opacity: 0;
+  background: #ff79da;
+  background: linear-gradient(168deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 180px;
+  animation: title 2s ease-in-out 2.4s 1 forwards;
 }
 .loader .hamburger {
   background-color: transparent;
   height: auto;
   width: 150px;
-  animation: spinner linear 3s infinite;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,28 +45,53 @@
   width: 100%;
 }
 .loader .hamburger .sesam {
-  width: 10px;
-  height: 3px;
+  width: 15px;
+  height: 4px;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 100%;
   position: absolute;
   margin-top: 10px;
 }
 .loader .hamburger #sesam1 {
-  margin-left: 40px;
+  margin-left: 10px;
+  transform: rotate(340deg);
+}
+.loader .hamburger #sesam6 {
+  margin-left: 30px;
+  transform: rotate(146deg);
 }
 .loader .hamburger #sesam2 {
-  margin-left: 60px;
+  margin-left: 50px;
+  transform: rotate(20deg);
+  margin-top: 6px;
 }
 .loader .hamburger #sesam3 {
   margin-left: 80px;
+  margin-top: 5px;
+  transform: rotate(350deg);
 }
 .loader .hamburger #sesam4 {
   margin-left: 100px;
+  transform: rotate(350deg);
+}
+.loader .hamburger #sesam5 {
+  margin-left: 125px;
+  transform: rotate(142deg);
 }
 .loader .hamburger #bread1 {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  animation-name: ingredient;
+  animation-duration: 0.4s;
+  animation-direction: reverse;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.loader .hamburger #bread2 {
+  height: 20px;
+  animation: ingredient 0.4s ease-in-out 2s 1 reverse forwards;
+  opacity: 0;
 }
 .loader .hamburger .content {
   display: flex;
@@ -61,6 +102,8 @@
 .loader .hamburger .content .tomatos {
   display: flex;
   justify-content: space-between;
+  animation: ingredient 0.4s ease-in-out 0.4s 1 reverse forwards;
+  opacity: 0;
 }
 .loader .hamburger .content .tomatos .tomato {
   background-color: #e71b1b;
@@ -70,31 +113,45 @@
 .loader .hamburger .content .cheddar {
   background-color: #ff9a16;
   height: 10px;
+  opacity: 0;
+  animation: ingredient 0.4s ease-in-out 0.8s 1 reverse forwards;
 }
 .loader .hamburger .content .beef {
   background-color: #6d0101;
   height: 20px;
+  opacity: 0;
+  animation: ingredient 0.4s ease-in-out 1.2s 1 reverse forwards;
 }
 .loader .hamburger .content .salad {
   background-color: #1c8f1c;
-  height: 15px;
+  height: 12px;
+  opacity: 0;
+  animation: ingredient 0.4s ease-in-out 1.6s 1 reverse forwards;
 }
 
-@keyframes hamburger {
+@keyframes ingredient {
   0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(90deg);
-    border-color: blue;
-  }
-  50% {
-    transform: rotate(180deg);
-    border-color: purple;
+    opacity: 1;
   }
   100% {
-    transform: rotate(360deg);
-    border-color: green;
+    transform: translateX(100vh);
+  }
+}
+@keyframes title {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loader {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 header {
@@ -112,30 +169,46 @@ header h1 img {
   width: 165px;
 }
 
-.menu_bloc {
+#entrees .card {
+  animation: card 0.8s ease-in-out 0s 1 forwards;
+}
+
+#dish .card {
+  animation: card 0.8s ease-in-out 0.8s 1 forwards;
+}
+
+#desserts .card {
+  animation: card 0.8s ease-in-out 1.6s 1 forwards;
+}
+
+.menu_blocs {
+  display: flex;
+  flex-direction: column;
+}
+.menu_blocs .menu_bloc {
   margin-bottom: 46px;
 }
-.menu_bloc h2 {
+.menu_blocs .menu_bloc h2 {
   text-transform: uppercase;
   font-weight: lighter;
   font-size: 16px;
   margin-bottom: 5px;
   margin-left: 7px;
 }
-.menu_bloc hr {
+.menu_blocs .menu_bloc hr {
   height: 3px;
   background-color: #99e2d0;
   border: none;
   width: 40px;
   margin-left: 7px;
 }
-.menu_bloc .cards {
+.menu_blocs .menu_bloc .cards {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
   /* padding-bottom: 23px;*/
 }
-.menu_bloc .cards .card {
+.menu_blocs .menu_bloc .cards .card {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -143,28 +216,93 @@ header h1 img {
   border-radius: 18px;
   padding: 15px 12px 13px 12px;
   margin-bottom: 14px;
+  opacity: 0;
+  cursor: pointer;
+  overflow-x: hidden;
 }
-.menu_bloc .cards .card h3 {
+.menu_blocs .menu_bloc .cards .card .check {
+  background-color: #99e2d0;
+  width: 70px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  position: absolute;
+  right: -80px;
+  top: 0;
+  transition: transform 0.4s;
+}
+.menu_blocs .menu_bloc .cards .card .check i {
+  color: white;
+  font-size: 24px;
+  transition: transform 0.6s;
+}
+.menu_blocs .menu_bloc .cards .card:hover .description_bloc .price {
+  margin-right: 80px;
+}
+.menu_blocs .menu_bloc .cards .card:hover .check i {
+  transform: rotate(360deg);
+}
+.menu_blocs .menu_bloc .cards .card:hover .check {
+  transform: translateX(-80px);
+}
+.menu_blocs .menu_bloc .cards .card h3 {
   font-size: 18px;
   margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.menu_bloc .cards .card .description_bloc {
+.menu_blocs .menu_bloc .cards .card .description_bloc {
   display: flex;
   justify-content: space-between;
 }
-.menu_bloc .cards .card .description_bloc .description {
+.menu_blocs .menu_bloc .cards .card .description_bloc .description {
   font-size: 15.6px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.menu_bloc .cards .card .description_bloc .price {
+.menu_blocs .menu_bloc .cards .card .description_bloc .price {
   font-weight: bold;
   margin-right: 12px;
   align-self: flex-end;
   font-size: 15px;
+  transition: margin-right 0.5s;
 }
 
+@keyframes card {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@media all and (min-width: 425px) {
+  .menu_blocs {
+    align-items: center;
+  }
+
+  .menu_bloc {
+    width: 425px;
+  }
+}
+@media all and (min-width: 970px) {
+  .menu_blocs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .menu_bloc {
+    margin: 0px 10px 0px 10px;
+  }
+}
 footer {
   background-color: #353535;
   padding: 25px 0px 37px 25px;
@@ -191,7 +329,8 @@ footer .text a i {
   margin-right: 11px;
   font-size: 14px;
 }
-footer .text a:nth-child(1), footer .text a:nth-child(2) {
+footer .text a:nth-child(1),
+footer .text a:nth-child(2) {
   font-weight: bold;
   font-size: 15.5px;
 }
@@ -202,6 +341,16 @@ footer .text a:nth-child(2) i {
   align-items: flex-end;
 }
 
+@media all and (min-width: 620px) {
+  footer {
+    padding-left: 10px;
+  }
+
+  footer .text {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -285,6 +434,13 @@ main #menu button {
 
 footer {
   margin-top: 13px;
+}
+
+@media all and (min-width: 425px) {
+  main #menu {
+    bottom: 0px;
+    margin-bottom: 38px;
+  }
 }
 
 /*# sourceMappingURL=menus.css.map */

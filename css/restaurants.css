@@ -4,6 +4,8 @@
   padding-top: 58px;
   padding-bottom: 46px;
   background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
 }
 #restaurants h3 {
   font-size: 24px;
@@ -74,6 +76,38 @@
 #restaurants .cards #sens .image {
   background-image: url("../images/sens.jpg");
   background-position: 50% 100%;
+}
+
+@media all and (min-width: 480px) {
+  #restaurants .cards {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #restaurants .cards #palette .image {
+    background-position: 50% 60%;
+  }
+
+  #restaurants .cards #francaise .image {
+    background-position: 50% 90%;
+  }
+
+  #restaurants .cards .card {
+    width: 400px;
+    margin: 10px;
+  }
+}
+@media all and (min-width: 1024px) {
+  #restaurants {
+    width: 1024px;
+    align-self: center;
+    background-color: white;
+  }
+
+  #restaurants h3 {
+    align-self: center;
+  }
 }
 
 /*# sourceMappingURL=restaurants.css.map */

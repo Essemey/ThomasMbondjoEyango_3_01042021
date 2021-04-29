@@ -1,27 +1,43 @@
-.menu_bloc {
+#entrees .card {
+  animation: card 0.8s ease-in-out 0s 1 forwards;
+}
+
+#dish .card {
+  animation: card 0.8s ease-in-out 0.8s 1 forwards;
+}
+
+#desserts .card {
+  animation: card 0.8s ease-in-out 1.6s 1 forwards;
+}
+
+.menu_blocs {
+  display: flex;
+  flex-direction: column;
+}
+.menu_blocs .menu_bloc {
   margin-bottom: 46px;
 }
-.menu_bloc h2 {
+.menu_blocs .menu_bloc h2 {
   text-transform: uppercase;
   font-weight: lighter;
   font-size: 16px;
   margin-bottom: 5px;
   margin-left: 7px;
 }
-.menu_bloc hr {
+.menu_blocs .menu_bloc hr {
   height: 3px;
   background-color: #99e2d0;
   border: none;
   width: 40px;
   margin-left: 7px;
 }
-.menu_bloc .cards {
+.menu_blocs .menu_bloc .cards {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
   /* padding-bottom: 23px;*/
 }
-.menu_bloc .cards .card {
+.menu_blocs .menu_bloc .cards .card {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -29,26 +45,92 @@
   border-radius: 18px;
   padding: 15px 12px 13px 12px;
   margin-bottom: 14px;
+  opacity: 0;
+  cursor: pointer;
+  overflow-x: hidden;
 }
-.menu_bloc .cards .card h3 {
+.menu_blocs .menu_bloc .cards .card .check {
+  background-color: #99e2d0;
+  width: 70px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  position: absolute;
+  right: -80px;
+  top: 0;
+  transition: transform 0.4s;
+}
+.menu_blocs .menu_bloc .cards .card .check i {
+  color: white;
+  font-size: 24px;
+  transition: transform 0.6s;
+}
+.menu_blocs .menu_bloc .cards .card:hover .description_bloc .price {
+  margin-right: 80px;
+}
+.menu_blocs .menu_bloc .cards .card:hover .check i {
+  transform: rotate(360deg);
+}
+.menu_blocs .menu_bloc .cards .card:hover .check {
+  transform: translateX(-80px);
+}
+.menu_blocs .menu_bloc .cards .card h3 {
   font-size: 18px;
   margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.menu_bloc .cards .card .description_bloc {
+.menu_blocs .menu_bloc .cards .card .description_bloc {
   display: flex;
   justify-content: space-between;
 }
-.menu_bloc .cards .card .description_bloc .description {
+.menu_blocs .menu_bloc .cards .card .description_bloc .description {
   font-size: 15.6px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.menu_bloc .cards .card .description_bloc .price {
+.menu_blocs .menu_bloc .cards .card .description_bloc .price {
   font-weight: bold;
   margin-right: 12px;
   align-self: flex-end;
   font-size: 15px;
+  transition: margin-right 0.5s;
+}
+
+@keyframes card {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@media all and (min-width: 425px) {
+  .menu_blocs {
+    align-items: center;
+  }
+
+  .menu_bloc {
+    width: 425px;
+  }
+}
+@media all and (min-width: 970px) {
+  .menu_blocs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .menu_bloc {
+    margin: 0px 10px 0px 10px;
+  }
 }
 
 /*# sourceMappingURL=menus_blocs.css.map */

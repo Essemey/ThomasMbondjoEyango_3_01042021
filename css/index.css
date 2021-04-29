@@ -210,9 +210,20 @@ header h1 img {
   opacity: 0.8;
 }
 
+@media all and (min-width: 1110px) {
+  #intro {
+    background-color: white;
+  }
+
+  #intro h2 {
+    width: auto;
+  }
+}
 #explication {
   height: 440px;
   padding-top: 52px;
+  display: flex;
+  flex-direction: column;
 }
 #explication h3 {
   font-size: 24px;
@@ -264,9 +275,44 @@ header h1 img {
   color: #9356dc;
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 375px) {
   #explication #instructions .instruction {
     width: 273px;
+  }
+}
+@media all and (min-width: 480px) {
+  #explication #instructions {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #explication #instructions .instruction {
+    margin: 15px;
+  }
+}
+@media all and (min-width: 736px) {
+  #explication {
+    height: 370px;
+  }
+}
+@media all and (min-width: 1024px) {
+  #explication h3 {
+    align-self: center;
+    margin-left: 0px;
+  }
+}
+@media all and (min-width: 1110px) {
+  #explication {
+    height: 300px;
+    width: 1110px;
+    border-radius: 20px;
+    background-color: #9256dc0a;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    align-self: center;
+    box-shadow: 1px 2px 8px 2px rgba(227, 221, 221, 0.75);
   }
 }
 #restaurants {
@@ -275,6 +321,8 @@ header h1 img {
   padding-top: 58px;
   padding-bottom: 46px;
   background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
 }
 #restaurants h3 {
   font-size: 24px;
@@ -347,6 +395,37 @@ header h1 img {
   background-position: 50% 100%;
 }
 
+@media all and (min-width: 480px) {
+  #restaurants .cards {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #restaurants .cards #palette .image {
+    background-position: 50% 60%;
+  }
+
+  #restaurants .cards #francaise .image {
+    background-position: 50% 90%;
+  }
+
+  #restaurants .cards .card {
+    width: 400px;
+    margin: 10px;
+  }
+}
+@media all and (min-width: 1024px) {
+  #restaurants {
+    width: 1024px;
+    align-self: center;
+    background-color: white;
+  }
+
+  #restaurants h3 {
+    align-self: center;
+  }
+}
 footer {
   background-color: #353535;
   padding: 25px 0px 37px 25px;
@@ -373,7 +452,8 @@ footer .text a i {
   margin-right: 11px;
   font-size: 14px;
 }
-footer .text a:nth-child(1), footer .text a:nth-child(2) {
+footer .text a:nth-child(1),
+footer .text a:nth-child(2) {
   font-weight: bold;
   font-size: 15.5px;
 }
@@ -384,6 +464,16 @@ footer .text a:nth-child(2) i {
   align-items: flex-end;
 }
 
+@media all and (min-width: 620px) {
+  footer {
+    padding-left: 10px;
+  }
+
+  footer .text {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -393,6 +483,8 @@ footer .text a:nth-child(2) i {
 body {
   font-family: "Roboto";
   background-color: white;
+  display: flex;
+  flex-direction: column;
 }
 body .city {
   display: flex;
@@ -405,6 +497,18 @@ body .city {
 body .city p {
   margin-left: 18px;
   font-size: 16px;
+}
+
+@media all and (min-width: 1110px) {
+  body .city {
+    background-color: white;
+  }
+  body .city i {
+    color: #c589e5;
+  }
+  body .city p {
+    color: #f18fe1;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

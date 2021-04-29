@@ -24,7 +24,8 @@ footer .text a i {
   margin-right: 11px;
   font-size: 14px;
 }
-footer .text a:nth-child(1), footer .text a:nth-child(2) {
+footer .text a:nth-child(1),
+footer .text a:nth-child(2) {
   font-weight: bold;
   font-size: 15.5px;
 }
@@ -33,6 +34,17 @@ footer .text a:nth-child(2) i {
   font-size: 12.5px;
   display: flex;
   align-items: flex-end;
+}
+
+@media all and (min-width: 620px) {
+  footer {
+    padding-left: 10px;
+  }
+
+  footer .text {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 /*# sourceMappingURL=footer.css.map */

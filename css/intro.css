@@ -39,4 +39,14 @@
   opacity: 0.8;
 }
 
+@media all and (min-width: 1110px) {
+  #intro {
+    background-color: white;
+  }
+
+  #intro h2 {
+    width: auto;
+  }
+}
+
 /*# sourceMappingURL=intro.css.map */
