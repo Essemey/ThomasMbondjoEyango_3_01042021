@@ -22,7 +22,8 @@
   background: linear-gradient(168deg, #ff79da, #9356dc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: 180px;
+  width: 190px;
+  text-align: center;
   animation: title 2s ease-in-out 2.4s 1 forwards;
 }
 .loader .hamburger {
@@ -281,6 +282,11 @@ header h1 img {
   to {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+@media all and (max-width: 375px) {
+  .menu_blocs .menu_bloc .cards .card h3 {
+    width: 210px;
   }
 }
 @media all and (min-width: 425px) {

@@ -112,6 +112,11 @@
     opacity: 1;
   }
 }
+@media all and (max-width: 375px) {
+  .menu_blocs .menu_bloc .cards .card h3 {
+    width: 210px;
+  }
+}
 @media all and (min-width: 425px) {
   .menu_blocs {
     align-items: center;

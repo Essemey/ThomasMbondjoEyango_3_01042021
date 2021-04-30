@@ -54,7 +54,7 @@
   color: #9356dc;
 }
 
-@media all and (max-width: 375px) {
+@media all and (max-width: 355px) {
   #explication #instructions .instruction {
     width: 273px;
   }

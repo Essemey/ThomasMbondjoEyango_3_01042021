@@ -22,7 +22,8 @@
   background: linear-gradient(168deg, #ff79da, #9356dc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: 180px;
+  width: 190px;
+  text-align: center;
   animation: title 2s ease-in-out 2.4s 1 forwards;
 }
 .loader .hamburger {
