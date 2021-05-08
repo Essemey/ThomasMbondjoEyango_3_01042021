@@ -304,7 +304,7 @@ header h1 img {
     margin-left: 0px;
   }
 }
-@media all and (min-width: 1110px) {
+@media all and (min-width: 1145px) {
   #explication {
     height: 300px;
     width: 1110px;
