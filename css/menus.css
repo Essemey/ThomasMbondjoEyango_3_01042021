@@ -432,6 +432,7 @@ main #menu_header .heart {
 main #menu_header .heart:hover .hidden-heart {
   opacity: 1;
   transform: scale(1.1);
+  transition: transform 1s, opacity 1.5s;
 }
 main #menu_header .heart .hidden-heart {
   background: #ff79da;
@@ -444,7 +445,6 @@ main #menu_header .heart .hidden-heart {
   right: 2px;
   bottom: 10px;
   opacity: 0;
-  transition: transform 1s, opacity 1.5s;
 }
 main #menu button {
   background: #ff79da;

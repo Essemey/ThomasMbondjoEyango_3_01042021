@@ -32,18 +32,22 @@
   border-top-right-radius: 20px;
   display: flex;
   justify-content: flex-end;
+  text-decoration: none;
 }
 #restaurants .cards .card .informations {
-  padding-left: 15px;
-  padding-top: 17px;
-  padding-right: 5px;
   display: flex;
   align-items: center;
+  height: 76px;
 }
 #restaurants .cards .card .informations .text {
   margin-right: auto;
   text-decoration: none;
   color: #000;
+  width: 100%;
+  height: 100%;
+  padding-top: 17px;
+  padding-left: 15px;
+  padding-right: 5px;
 }
 #restaurants .cards .card .informations .text h4 {
   font-size: 18px;
@@ -70,7 +74,7 @@
   right: 20px;
   z-index: 5;
   opacity: 0;
-  transition: transform 1s, opacity 1.5s;
+  transition: transform 0.2s, opacity 0.6s;
 }
 #restaurants .cards .card .new {
   height: 30px;
