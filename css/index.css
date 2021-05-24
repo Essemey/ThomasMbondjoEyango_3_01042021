@@ -171,16 +171,30 @@ header h1 img {
 }
 
 #intro {
-  padding-top: 43px;
-  height: 287px;
   background-color: #f6f6f6;
 }
-#intro h2 {
+#intro .city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+  height: 50px;
+  color: #353535;
+}
+#intro .city p {
+  margin-left: 18px;
+  font-size: 16px;
+}
+#intro .intro_speech {
+  padding-top: 43px;
+  height: 287px;
+}
+#intro .intro_speech h2 {
   width: 230px;
   margin: auto;
   text-align: center;
 }
-#intro h3 {
+#intro .intro_speech h3 {
   width: 312px;
   margin: auto;
   text-align: center;
@@ -189,7 +203,7 @@ header h1 img {
   margin-top: 20px;
   margin-bottom: 30px;
 }
-#intro a {
+#intro .intro_speech a {
   text-decoration: none;
   margin: auto;
   margin-bottom: 57px;
@@ -206,7 +220,7 @@ header h1 img {
   border-radius: 100px;
   transition: box-shadow 0.7s, opacity 0.7s;
 }
-#intro a:hover {
+#intro .intro_speech a:hover {
   box-shadow: 1px 2px 8px 2px rgba(68, 68, 68, 0.75);
   opacity: 0.8;
 }
@@ -214,6 +228,15 @@ header h1 img {
 @media all and (min-width: 1110px) {
   #intro {
     background-color: white;
+  }
+  #intro .city {
+    background-color: white;
+  }
+  #intro .city i {
+    color: #c589e5;
+  }
+  #intro .city p {
+    color: #f18fe1;
   }
 
   #intro h2 {
@@ -510,30 +533,6 @@ body {
   background-color: white;
   display: flex;
   flex-direction: column;
-}
-body .city {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #eaeaea;
-  height: 50px;
-  color: #353535;
-}
-body .city p {
-  margin-left: 18px;
-  font-size: 16px;
-}
-
-@media all and (min-width: 1110px) {
-  body .city {
-    background-color: white;
-  }
-  body .city i {
-    color: #c589e5;
-  }
-  body .city p {
-    color: #f18fe1;
-  }
 }
 
 /*# sourceMappingURL=index.css.map */
